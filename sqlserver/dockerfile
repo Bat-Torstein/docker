@@ -1,3 +1,4 @@
 FROM microsoft/mssql-server-windows-express
+LABEL maintainer "Bat-Torstein"
 COPY InitDb* c:/init/
 RUN "Sqlcmd -E -S 127.0.0.1 -i init/initDb.sql"
