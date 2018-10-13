@@ -1,0 +1,10 @@
+version: '3'
+services:
+    wcf:
+     container_name: wcf
+     build:
+      context: ../
+      dockerfile: docker/dockerfile
+     ports:
+     - 7687:7687
+     

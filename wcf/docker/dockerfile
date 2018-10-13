@@ -1,0 +1,7 @@
+FROM microsoft/wcf
+LABEL maintainer "Bat-Torstein"
+WORKDIR C:/WcfService
+COPY ./WcfService/bin/debug .
+ENTRYPOINT cmd /c WcfService.exe
+
+
