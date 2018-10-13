@@ -1,0 +1,10 @@
+/bin
+/.vs
+/obj
+/packages
+/WcfClient/obj
+/WcfClient/bin
+/WcfService/obj
+/WcfService/bin
+/Shared/obj
+/Shared/bin
