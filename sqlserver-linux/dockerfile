@@ -1,0 +1,18 @@
+FROM microsoft/mssql-server-linux:2017-latest
+
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=mordi1234567!
+ENV MSSQL_PID=Developer
+
+WORKDIR /src
+EXPOSE 1433
+
+COPY setup-database.sh ./
+COPY entrypoint.sh ./
+COPY init_db.sql ./
+
+# Grant permissions for the setup-database and entrypoint shell scripts to be executable
+RUN chmod +x ./setup-database.sh
+RUN chmod +x ./entrypoint.sh
+
+CMD bash ./entrypoint.sh

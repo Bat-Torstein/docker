@@ -1,0 +1,10 @@
+version: '3'
+services:
+    sqldblinux:
+     container_name: sqldblinux
+     build: .
+     ports:
+     - 1433:1433
+     tty: true
+      
+     
